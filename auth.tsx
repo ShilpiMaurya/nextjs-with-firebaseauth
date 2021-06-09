@@ -11,11 +11,11 @@ interface Props {
 }
 export const AuthProvider = ({ children }: Props) => {
   firebaseClient();
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
   useEffect(() => {
     return firebase.auth().onIdTokenChanged(async user => {
       if (!user) {
-        setUser(null);
+        setUser({});
         nookies.set(undefined, "token", "", {});
         return;
       } else {
