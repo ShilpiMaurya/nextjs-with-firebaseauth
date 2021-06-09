@@ -8,7 +8,7 @@ const Text = styled.div`
 `;
 
 export default function Home() {
-  const { user } = useAuth();
+  const { user }: any = useAuth();
   return (
     <>
       <Container>

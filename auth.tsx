@@ -6,7 +6,10 @@ import "firebase/auth";
 
 const AuthContext = createContext({});
 
-export const AuthProvider = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+export const AuthProvider = ({ children }: Props) => {
   firebaseClient();
   const [user, setUser] = useState(null);
   useEffect(() => {
