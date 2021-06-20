@@ -44,6 +44,8 @@ export default function Login() {
             <Button
               isDisabled={email === "" || password === ""}
               onClick={async () => {
+                console.log(email, "email");
+                console.log(password, "password");
                 await firebase
                   .auth()
                   .createUserWithEmailAndPassword(email, password)

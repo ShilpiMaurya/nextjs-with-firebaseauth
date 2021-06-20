@@ -12,10 +12,16 @@ export default function Home() {
   return (
     <>
       <Container>
+        <h1>Welcome to the xyz website page</h1>
         <Text>{`User ID: ${user ? user.uid : "No user signed it"}`}</Text>
         <button>
           <Link href="/login">
             <a>Login</a>
+          </Link>
+        </button>
+        <button>
+          <Link href="/authenticated">
+            <a>Authenticated</a>
           </Link>
         </button>
       </Container>

@@ -10,9 +10,9 @@ interface Props {
   children: React.ReactNode;
 }
 export const AuthProvider = ({ children }: Props) => {
-  firebaseClient();
   const [user, setUser] = useState({});
   useEffect(() => {
+    firebaseClient();
     return firebase.auth().onIdTokenChanged(async user => {
       if (!user) {
         setUser({});
