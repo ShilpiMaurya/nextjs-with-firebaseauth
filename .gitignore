@@ -32,6 +32,8 @@ yarn.lock
 .env.test.local
 .env.production.local
 
+
 # vercel
 .vercel
 package-lock.json
+secrets.json
